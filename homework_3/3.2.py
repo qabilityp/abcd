@@ -1,4 +1,4 @@
-def split_list(user_input):
+def move_element(user_input):
     if len(user_input) < 2:
         print(user_input)
     elif len(user_input) > 2:
