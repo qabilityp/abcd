@@ -10,8 +10,7 @@ move_element([12, 3, 4, 10])
 move_element([1])
 move_element([])
 move_element([12, 3, 4, 10, 8])
-
-
+move_element([1, 2])
 
 
 
