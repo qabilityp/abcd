@@ -1,11 +1,8 @@
-def random_numbers(a):
-    d = []
-    d.append(a[0])
-    d.append(a[2])
-    d.append(a[-2])
-    print(d)
+import random
+def random_numbers():
+    my_list= [random.randint(1, 9) for i in range(random.randint(3, 10))]
+    result = [my_list[0], my_list[2], my_list[-2]]
+    print(my_list)
+    print(result)
 
-random_numbers([1, 2, 3, 4, 5, 6, 7, 9])
-random_numbers([1, 1, 2, 1])
-random_numbers([6, 3, 7])
-
+random_numbers()
