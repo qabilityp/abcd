@@ -11,8 +11,7 @@ def variable_name(a):
     if any(i in symbols for i in a):
         print(False)
         return
-    c = a.count('_')
-    if c > 1:
+    if '__' in a:
         print(False)
         return
     if a in keyword.kwlist:
@@ -26,3 +25,5 @@ variable_name("Variable")
 variable_name("var_iable")
 variable_name("var__iable")
 variable_name("for")
+variable_name("test_name_var")
+variable_name("___")
