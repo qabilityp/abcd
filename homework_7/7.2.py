@@ -1,9 +1,10 @@
-def correct_sentence(text):
+def correct_sentence(text: str) -> str:
     sentence_cptl = text[0].upper() + text[1:]
     if '.' not in text[-1]:
         return sentence_cptl + '.'
     else:
         return sentence_cptl
+
 
 assert correct_sentence("greetings, friends") == "Greetings, friends.", 'Test1'
 assert correct_sentence("hello") == "Hello.", 'Test2'
