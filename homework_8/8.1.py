@@ -1,4 +1,4 @@
-def add_one(some_list) -> list[int]:
+def add_one(some_list: list[int]) -> list[int]:
     some_list_join = int(''.join(map(str, some_list)))
     some_list_join_2 = some_list_join + 1
     return [int(i) for i in str(some_list_join_2)]

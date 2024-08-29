@@ -1,4 +1,4 @@
-def find_unique_value(some_list) -> int:
+def find_unique_value(some_list: list[[int, float]]) -> [int, float]:
     for i in some_list:
         if some_list.count(i) == 1:
             return i
