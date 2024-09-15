@@ -1,7 +1,8 @@
 from inspect import isgenerator
+from typing import Generator
 
 
-def generate_cube_numbers(end: int) -> list[int]:
+def generate_cube_numbers(end: int) -> Generator[int, None, None]:
     i = 2
     while i**3 <= end:
         yield i**3
