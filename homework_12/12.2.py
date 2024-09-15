@@ -1,46 +1,48 @@
 class Item:
 
-    def __init__(self, name, price, description, dimensions):
+    def __init__(self, name: str, price: float, description: str, dimensions: str) -> None:
         self.price = price
         self.description = description
         self.dimensions = dimensions
         self.name = name
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'{self.name}, price: {self.price}'
         pass
 
+
 class User:
 
-    def __init__(self, name, surname, numberphone):
+    def __init__(self, name: str, surname: str, numberphone: str) -> None:
         self.name = name
         self.surname = surname
         self.numberphone = numberphone
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'{self.name}, {self.surname}'
         pass
 
+
 class Purchase:
-    def __init__(self, user):
+    def __init__(self, user: User) -> None:
         self.products = {}
         self.user = user
         self.total = 0
 
-    def add_item(self, item, cnt):
+    def add_item(self, item: Item, cnt: int) -> None:
         self.products[item] = cnt
 
-    def __str__(self):
+    def __str__(self) -> str:
         items_str = '\n'.join([f'{item.name}: {count} pcs.' for item, count in self.products.items()])
         return f'User: {self.user}\nItems:\n{items_str}'
-        pass
 
-    def get_total(self):
+    def get_total(self) -> float:
         total = 0
         for item, count in self.products.items():
             total += item.price * count
         return total
         pass
+
 
 lemon = Item('lemon', 5, "yellow", "small", )
 apple = Item('apple', 2, "red", "middle", )
